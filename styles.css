@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,40 +12,92 @@
     --font-main: 'Fira Code', monospace;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-main);
-    margin: 0;
-    padding: 0;
+    min-height: 100%;
 }
 
 /* 📌 2. Layout con Grid - Mobile First */
 .container {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template: 
+        "header" 10%
+        "navbar" 10%
+        "main" 40%
+        "sidebar" 20%
+        "footer" 20%;
+    /* gap: 20px; */
     /*padding: 20px;*/
 }
 
 /* 📌 3. Secciones con Flex */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    grid-area: header;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: darkblue;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.main {
+    grid-area: main;
+    background-color: darkgreen;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: darkgoldenrod;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: darkred;
 }
 
 /* 📱 4. Media Queries para adaptación */
 @media (min-width: 600px) {
     .container {
-        grid-template-columns: 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr; */
+        /* grid-template-rows: 1fr 1fr 6fr 3fr 1fr; CAMBIAR AL GUSTO*/
+        grid-template:
+            "header header" 10%
+            "navbar navbar" 10%
+            "sidebar main" 40%
+            "sidebar main" 20%
+            "footer footer" 20% /
+            30%     auto;
     }
 }
 
 @media (min-width: 1024px) {
     .container {
-        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* grid-template-rows: 1fr 1fr 6fr 3fr 1fr; CAMBIAR AL GUSTO*/
+        grid-template-areas:
+            "header header header" 10%
+            "navbar navbar navbar" 10%
+            "sidebar main main" 40%
+            "sidebar main main" 20%
+            "footer footer footer" 20% /
+            30%  auto auto;
     }
 }

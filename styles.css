@@ -26,36 +26,47 @@ body {
 /* 📌 2. Layout con Grid - Mobile First */
 .container {
     display: grid;
-    grid-template: 
-        "header" 10%
-        "navbar" 10%
+    grid-template:
+        "header" 20%
         "main" 40%
         "sidebar" 20%
         "footer" 20%;
-    /* gap: 20px; */
-    /*padding: 20px;*/
 }
 
 /* 📌 3. Secciones con Flex */
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     grid-area: header;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
+    position: relative;
 }
 
-.navbar {
-    grid-area: navbar;
-    background-color: darkblue;
+/* 🔹 Menú hamburguesa (solo en móviles y tablets) */
+.menu {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
 }
 
-.navbar ul {
+.menu li {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+/* Mostrar el menú cuando está activo */
+.menu.active {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.navbar li {
-    list-style: none;
 }
 
 .main {
@@ -73,31 +84,52 @@ body {
     background-color: darkred;
 }
 
-/* 📱 4. Media Queries para adaptación */
+/* 📱 Media Queries */
+/* 🔹 Mantiene el menú hamburguesa hasta 1023px */
 @media (min-width: 600px) {
     .container {
-        /* grid-template-columns: 1fr 1fr; */
-        /* grid-template-rows: 1fr 1fr 6fr 3fr 1fr; CAMBIAR AL GUSTO*/
         grid-template:
-            "header header" 10%
-            "navbar navbar" 10%
+            "header header" 20%
             "sidebar main" 40%
             "sidebar main" 20%
             "footer footer" 20% /
-            30%     auto;
+            1fr 2fr;
     }
 }
 
+/* 🔹 En pantallas grandes (1024px en adelante), menú normal */
 @media (min-width: 1024px) {
     .container {
-        /* grid-template-columns: 1fr 1fr 1fr; */
-        /* grid-template-rows: 1fr 1fr 6fr 3fr 1fr; CAMBIAR AL GUSTO*/
-        grid-template-areas:
-            "header header header" 10%
-            "navbar navbar navbar" 10%
+        grid-template:
+            "header header header" 20%
             "sidebar main main" 40%
             "sidebar main main" 20%
-            "footer footer footer" 20% /
-            30%  auto auto;
+            "footer footer footer" 20% / 
+            1fr 3fr;
+    }
+
+    /* 🔹 Ocultar botón del menú hamburguesa */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* 🔹 Mostrar el menú en su posición normal */
+    .menu {
+        list-style: none;
+        display: flex !important;
+        flex-direction: row;
+        background: none;
+        position: static;
+        width: auto;
+    }
+
+    .menu li {
+        margin: 0 15px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
     }
 }

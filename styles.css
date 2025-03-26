@@ -6,9 +6,11 @@
 
 /* 🎨 1. Variables de color y tipografía */
 :root {
-    --bg-color: #121212;
-    --text-color: #ffffff;
-    --accent-color: #00ffcc;
+    --bg-color: #d1bfbd;
+    --primary: #D73964;
+    --secondary:  #3A3335;
+    --accent-color: #8a2f3e;
+    --text-color: #2C1A1D;
     --font-main: 'Fira Code', monospace;
 }
 
@@ -40,7 +42,8 @@ body {
     align-items: center;
     grid-area: header;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--secondary);
+    color: var(--bg-color);
     position: relative;
 }
 
@@ -48,11 +51,16 @@ body {
 .menu {
     display: none;
     flex-direction: column;
-    background: #333;
+    background: var(--accent-color);
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--bg-color);
 }
 
 .menu li {
@@ -71,17 +79,19 @@ body {
 
 .main {
     grid-area: main;
-    background-color: darkgreen;
+    background-color: var(--bg-color);
 }
 
 .sidebar {
     grid-area: sidebar;
-    background-color: darkgoldenrod;
+    background-color: var(--accent-color);
+    color: var(--text-color);
 }
 
 .footer {
     grid-area: footer;
-    background-color: darkred;
+    color: var(--primary);
+    background-color: var(--secondary);
 }
 
 /* 📱 Media Queries */
@@ -129,7 +139,7 @@ body {
 
     .menu a {
         text-decoration: none;
-        color: white;
+        color: var(--primary);
         padding: 10px;
     }
 }

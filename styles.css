@@ -4,16 +4,18 @@
     box-sizing: border-box;
 }
 
-/* 🎨 1. Variables de color y tipografía */
+/* Variables de color y tipografía */
 :root {
     --bg-color: #d1bfbd;
     --primary: #D73964;
     --secondary:  #3A3335;
     --accent-color: #8a2f3e;
+
     --text-color: #2C1A1D;
     --font-main: 'Fira Code', monospace;
 }
 
+/* ESTILOS GENERALES a nivel documento - HTML y Body */
 html {
     height: 100%;
 }
@@ -25,7 +27,7 @@ body {
     min-height: 100%;
 }
 
-/* 📌 2. Layout con Grid - Mobile First */
+/* LAYOUT con Grid - Mobile First */
 .container {
     display: grid;
     grid-template:
@@ -35,7 +37,8 @@ body {
         "footer" 20vh;
 }
 
-/* 📌 3. Secciones con Flex */
+/* SECCIONES DE LA PÁGINA */
+/* Header con Flex */
 .header {
     display: flex;
     justify-content: space-between;
@@ -47,7 +50,7 @@ body {
     position: relative;
 }
 
-/* 🔹 Menú hamburguesa (solo en móviles y tablets) */
+/* Menú hamburguesa (solo en móviles y tablets) */
 .menu {
     display: none;
     flex-direction: column;
@@ -77,25 +80,28 @@ body {
     display: flex;
 }
 
+/* Main */
 .main {
     grid-area: main;
     background-color: var(--bg-color);
 }
 
+/* Barra lateral */
 .sidebar {
     grid-area: sidebar;
     background-color: var(--accent-color);
     color: var(--text-color);
 }
 
+/* Footer */
 .footer {
     grid-area: footer;
     color: var(--primary);
     background-color: var(--secondary);
 }
 
-/* 📱 Media Queries */
-/* 🔹 Mantiene el menú hamburguesa hasta 1023px */
+/* MEDIA QUERIES */
+/* Mantiene el menú hamburguesa hasta 1023px */
 @media (min-width: 600px) {
     .container {
         grid-template:

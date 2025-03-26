@@ -80,7 +80,19 @@ body {
     display: flex;
 }
 
-/* Main */
+/* Estilos para el svg burger */
+.burger rect {
+    fill: var(--primary); /* Color del icono */
+    transition: fill 0.3s;
+}
+
+/* Cambiar color con hover */
+.burger:hover rect {
+    fill: var(--bg-color);
+}
+
+
+/* MAIN */
 .main {
     grid-area: main;
     background-color: var(--bg-color);

@@ -113,7 +113,7 @@ body {
     }
 }
 
-/* 🔹 En pantallas grandes (1024px en adelante), menú normal */
+/* En pantallas grandes (1024px en adelante), menú normal */
 @media (min-width: 1024px) {
     .container {
         grid-template:
@@ -124,12 +124,12 @@ body {
             1fr 3fr;
     }
 
-    /* 🔹 Ocultar botón del menú hamburguesa */
+    /* Ocultar botón del menú hamburguesa */
     .menu-toggle {
         display: none;
     }
 
-    /* 🔹 Mostrar el menú en su posición normal */
+    /* Mostrar el menú en su posición normal */
     .menu {
         list-style: none;
         display: flex !important;

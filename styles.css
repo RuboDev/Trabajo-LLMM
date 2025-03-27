@@ -50,6 +50,18 @@ body {
     position: relative;
 }
 
+.brand {
+    max-width: 96px; /* Ajusta según necesites */
+}
+
+
+.brand img {
+    width: 100%; /* Que se adapte al contenedor */
+    max-width: 96px; /* No crezca más de 96px */
+    height: auto; /* Mantiene la proporción */
+}
+
+
 /* Menú hamburguesa (solo en móviles y tablets) */
 .menu {
     /* display: none; */
@@ -163,6 +175,10 @@ body {
             "footer footer" 20vh /
             1fr 2fr;
     }
+
+        .brand img {
+            max-width: 128px; /* aumenta el tamaño en pantallas superiores a 600px de ancho */
+        }
 }
 
 /* En pantallas grandes (1024px en adelante), menú normal */

@@ -51,14 +51,13 @@ body {
 }
 
 .brand {
-    max-width: 160px; /* Ajusta según necesites */
-    /* margin-left: 16px; */
+    margin-left: 32px;
 }
 
 
 .brand img {
     width: 100%; /* Que se adapte al contenedor */
-    max-width: 160px; /* No crezca más de 80px */
+    max-width: 96px; /* No crezca más de 96px */
     height: auto; /* Mantiene la proporción */
 }
 
@@ -231,12 +230,7 @@ body {
     }
 
     .brand {
-        /* margin-left: 32px; */
-        max-width: 192px;
-    }
-
-    .brand img {
-        max-width: 192px; /* aumenta el tamaño en pantallas superiores a 600px de ancho */
+        margin-left: 48px;
     }
 
     .burger {
@@ -279,6 +273,10 @@ body {
 
     .brand {
         margin-left: 64px;
+    }
+
+    .brand img {
+        max-width: 112px; /* aumenta el tamaño en pantallas superiores a 600px de ancho */
     }
 
     /* Mostrar el menú en su posición normal */

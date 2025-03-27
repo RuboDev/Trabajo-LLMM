@@ -1,0 +1,18 @@
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 50px 20px 50px; /* top - right - bottom */
+}
+.social-links a {
+    color: var(--bg-color);
+    font-size: 24px;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #1da1f2; /* Color de Twitter */
+}
+
+.social-links i {
+    font-size: 64px; /* Ajusta el tamaño de los iconos */
+}

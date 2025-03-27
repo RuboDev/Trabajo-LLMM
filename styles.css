@@ -34,7 +34,7 @@ body {
         "header" 10vh
         "main" auto
         "sidebar" auto
-        "footer" 20vh;
+        "footer" auto;
 }
 
 /* SECCIONES DE LA PÁGINA */
@@ -170,17 +170,25 @@ body {
     grid-area: footer;
     color: var(--primary);
     background-color: var(--secondary);
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 /* MEDIA QUERIES */
 /* Mantiene el menú hamburguesa hasta 1023px */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .container {
         grid-template:
             "header header" 10vh
             "sidebar main" auto
             "sidebar main" auto
-            "footer footer" 20vh /
+            "footer footer" auto /
             1fr 4fr;
     }
 
@@ -201,6 +209,18 @@ body {
     .menu-toggle{
         margin-right: 32px;
     }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .footer-info,
+    .footer-maps {
+        max-width: 400px;
+        text-align: left;
+    }
 }
 
 /* En pantallas grandes (1024px en adelante), menú normal */
@@ -210,7 +230,7 @@ body {
             "header header header" 10vh
             "sidebar main main" auto
             "sidebar main main" auto
-            "footer footer footer" 20vh / 
+            "footer footer footer" auto / 
             1fr 5fr;
     }
 

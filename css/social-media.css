@@ -25,7 +25,7 @@
     text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .social-links{
         flex-direction: column;
         margin-top: 15%;

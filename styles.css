@@ -70,7 +70,7 @@ body {
     flex-direction: column;
     background: var(--accent-color);
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
 
@@ -95,6 +95,7 @@ body {
 }
 
 .menu li {
+    list-style: none;
     text-align: center;
     padding: 15px 0;
 }
@@ -111,6 +112,43 @@ body {
     display: flex;
     opacity: 1;
     clip-path: inset(0 0 0 0); /* Muestra el menú */
+    visibility: visible;
+}
+
+/* Estilos del icono de la "X" */
+.close-menu {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    filter: drop-shadow(0px 0px 3px #d1bfbdc7); /* Sombra alrededor de la "X" */
+    transition: all 0.4s ease; /* Transición suave para todos los cambios */
+    opacity: 0;
+    visibility: hidden;
+}
+.close line {
+    stroke-width: 12px; /* Aumentamos el grosor de las líneas al hacer hover */
+    stroke: var(--secondary); /* Color de las líneas de la "X" */
+    transition: all 1.7s ease; /* Transición suave para todos los cambios */
+}
+
+
+/* Hover líneas de la "X" */
+.close:hover line {
+    stroke-width: 16px; /* Aumentamos el grosor de las líneas al hacer hover */
+    stroke: var(--primary); /* Color de las líneas de la "X" */
+}
+
+/* Hover del item */
+.close-menu:hover {
+    transform: scale(1.1); /* Agrandamos un poco el icono para hacerlo más llamativo */
+    filter: drop-shadow(0px 0px 3px #3A3335); /* Sombra alrededor de la "X" */
+}
+
+/* Mostrar el icono de la "X" cuando el menú está abierto */
+.menu.active .close-menu {
+    display: block;
+    opacity: 1; /* Hacemos el icono visible */
     visibility: visible;
 }
 

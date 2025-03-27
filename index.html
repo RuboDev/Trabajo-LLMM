@@ -7,14 +7,20 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <title>CiberEscudo | Compañía de Seguridad informática</title>
 
+    <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Estilos propios -->
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="css/social-media.css">
+    <link rel="stylesheet" href="css/main-style.css">
 </head>
 
 <body class="container">
     <header class="header">
-        <div class="brand"><a href="index.html"><img src="img/main-logo.png" alt="logo"></a></div>
+        <div class="brand">
+            <a href="index.html"><img src="img/main-logo.png" alt="logo"></a>
+        </div>
         
         <nav>
             <div class="overlay"></div> <!-- Fondo borroso -->
@@ -27,7 +33,7 @@
             </a>
 
             <ul class="menu">
-                <li class="close-menu">
+                <li class="close-menu"> <!-- botón X para cerrar menu -->
                     <svg class="close" viewBox="0 0 100 100" width="40" height="40">
                         <line x1="10" y1="10" x2="90" y2="90" stroke="var(--secondary)" stroke-width="10"/>
                         <line x1="90" y1="10" x2="10" y2="90" stroke="var(--secondary)" stroke-width="10"/>
@@ -40,7 +46,9 @@
             </ul>
         </nav>
     </header>
-    <main class="main">COSAS DEL MAIN
+    <main class="main">
+        <div class="main-container">
+            COSAS DEL MAIN
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci expedita tenetur doloribus porro facilis aliquid optio a qui ullam quasi rem dolorum quas, quae eum, eligendi eos dolorem. Accusantium, mollitia!
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolores dolor ipsum laborum alias voluptates enim dicta suscipit obcaecati, sed, doloremque quod! Sapiente nesciunt minus accusantium suscipit voluptatum ullam nobis.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo exercitationem placeat, saepe quas obcaecati doloremque quis asperiores, alias officiis delectus debitis et velit voluptatibus. Ut fugiat maxime aut optio.
@@ -56,6 +64,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explicabo exercitationem placeat, saepe quas obcaecati doloremque quis asperiores, alias officiis delectus debitis et velit voluptatibus. Ut fugiat maxime aut optio.
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente aut deserunt similique nam numquam ab quis? Quaerat consectetur sequi libero optio commodi rem voluptate delectus nobis, a iste est nulla!
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia est sint, dolorum provident possimus minima! Consequuntur ex harum placeat, voluptatum minus odio similique vitae nulla aliquam maiores corporis tenetur labore.
+        </div>
     </main>
     <aside class="sidebar">
         <h3 id="siguenos">¡SÍGUENOS!</h3>
@@ -64,7 +73,6 @@
             <a href="https://facebook.com/tucuenta" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://instagram.com/tucuenta" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        
     </aside>
     <footer class="footer">
         <div class="footer-container">
@@ -77,7 +85,14 @@
     
             <div class="footer-maps">
                 <h3>Ubicación</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6160.866377570045!2d-0.47532831055149527!3d39.459541398406834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6050412e0df053%3A0x11f0149d167eaef7!2sIES%20Salvador%20Gadea!5e0!3m2!1ses!2ses!4v1743072094879!5m2!1ses!2ses" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6160.866377570045!2d-0.47532831055149527!3d39.459541398406834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6050412e0df053%3A0x11f0149d167eaef7!2sIES%20Salvador%20Gadea!5e0!3m2!1ses!2ses!4v1743072094879!5m2!1ses!2ses" 
+                    width="350" 
+                    height="200" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </footer>

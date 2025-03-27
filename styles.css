@@ -51,13 +51,14 @@ body {
 }
 
 .brand {
-    max-width: 96px; /* Ajusta según necesites */
+    max-width: 80px; /* Ajusta según necesites */
+    margin-left: 16px;
 }
 
 
 .brand img {
     width: 100%; /* Que se adapte al contenedor */
-    max-width: 96px; /* No crezca más de 96px */
+    max-width: 80px; /* No crezca más de 80px */
     height: auto; /* Mantiene la proporción */
 }
 
@@ -101,6 +102,7 @@ body {
 .menu-toggle {
     display: block;
     cursor: pointer;
+    margin-right: 16px;
     z-index: 15;
 }
 
@@ -130,6 +132,12 @@ body {
 .overlay.active {
     opacity: 1;
     pointer-events: all;
+}
+
+/* BURGER */
+.burger {
+    width: 50%; /* tamaño en pantallas pequeñas de la burger */
+    height: auto;
 }
 
 /* Estilos para el svg burger */
@@ -176,9 +184,22 @@ body {
             1fr 2fr;
     }
 
-        .brand img {
-            max-width: 128px; /* aumenta el tamaño en pantallas superiores a 600px de ancho */
-        }
+    .brand {
+        margin-left: 32px;
+    }
+
+    .brand img {
+        max-width: 128px; /* aumenta el tamaño en pantallas superiores a 600px de ancho */
+    }
+
+    .burger {
+        width: 75%; /* tamaño en pantallas medianas de la burger */
+        height: auto;
+    }
+
+    .menu-toggle{
+        margin-right: 32px;
+    }
 }
 
 /* En pantallas grandes (1024px en adelante), menú normal */
@@ -197,6 +218,10 @@ body {
         display: none;
     }
 
+    .brand {
+        margin-left: 64px;
+    }
+
     /* Mostrar el menú en su posición normal */
     .menu {
         list-style: none;
@@ -205,6 +230,7 @@ body {
         background: none;
         position: static;
         width: auto;
+        margin-right: 64px;
         opacity: 1;
         clip-path: none;
         visibility: visible;

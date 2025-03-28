@@ -2,11 +2,67 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    padding: 20px;
+    padding: 3rem 1.5rem;
+}
+
+.bienvenida {
+    background: var(--bg-color); /* Color de fondo acorde a tu diseño */
+    color: var(--text-color);
+    text-align: start;
+}
+
+.bienvenida-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bienvenida h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.bienvenida p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Botón de contacto */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+/* Imagen corporativa */
+.multimedia-container {
+    flex: 1;
+    text-align: center;
+    
+}
+
+.multimedia-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 @media (min-width: 1024px) {
     .main-container{
         flex-direction: row;
+    }
+
+    #multimedia {
+        max-width: 50%;
     }
 }

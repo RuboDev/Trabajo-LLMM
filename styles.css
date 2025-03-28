@@ -44,7 +44,7 @@ body {
     justify-content: space-between;
     align-items: center;
     grid-area: header;
-    padding: 20px;
+    padding: 0.5rem;
     background: var(--secondary);
     color: var(--bg-color);
     position: relative;
@@ -52,7 +52,7 @@ body {
 
 /*Logo*/
 .brand {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 

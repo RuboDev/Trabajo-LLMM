@@ -20,4 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.classList.remove('active');
         overlay.classList.remove('active');
     });
+
+    // Cerrar el menú y quitar fondo borroso al hacer click en cualquier link del menu
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.menu').classList.remove('active');
+            document.querySelector('.overlay').classList.remove('active');
+        });
+    });
+    
 });

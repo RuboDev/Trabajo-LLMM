@@ -50,8 +50,9 @@ body {
     position: relative;
 }
 
+/*Logo*/
 .brand {
-    margin-left: 32px;
+    margin-left: 2rem;
 }
 
 
@@ -64,7 +65,6 @@ body {
 
 /* Menú hamburguesa (solo en móviles y tablets) */
 .menu {
-    /* display: none; */
     display: flex;
     flex-direction: column;
     background: var(--accent-color);
@@ -84,26 +84,24 @@ body {
 .menu a {
     text-decoration: none;
     color: var(--bg-color);
-    padding: 12px;
+    padding: 0.7rem;
 }
 
 .menu a:hover {
     color: var(--text-color);
     background-color: var(--bg-color);
-    border-radius: 16px;
+    border-radius: 1rem;
 }
 
 .menu li {
     list-style: none;
     text-align: center;
-    padding: 15px 0;
+    padding: 1rem 0;
 }
 
 .menu-toggle {
     display: block;
     cursor: pointer;
-    margin-right: 16px;
-    z-index: 15;
 }
 
 /* Mostrar el menú cuando está activo */
@@ -125,12 +123,12 @@ body {
     opacity: 0;
     visibility: hidden;
 }
+
 .close line {
     stroke-width: 12px; /* Aumentamos el grosor de las líneas al hacer hover */
     stroke: var(--secondary); /* Color de las líneas de la "X" */
     transition: all 1.7s ease; /* Transición suave para todos los cambios */
 }
-
 
 /* Hover líneas de la "X" */
 .close:hover line {
@@ -146,7 +144,7 @@ body {
 
 /* Mostrar el icono de la "X" cuando el menú está abierto */
 .menu.active .close-menu {
-    display: block;
+    /* display: block; */
     opacity: 1; /* Hacemos el icono visible */
     visibility: visible;
 }
@@ -254,16 +252,12 @@ body {
     }
 
     .brand {
-        margin-left: 48px;
+        margin-left: 2.5rem;
     }
 
     .burger {
         width: 75%; /* tamaño en pantallas medianas de la burger */
         height: auto;
-    }
-
-    .menu-toggle{
-        margin-right: 32px;
     }
 
     .footer-container {
@@ -290,7 +284,7 @@ body {
     }
 
     .brand {
-        margin-left: 64px;
+        margin-left: 4rem;
     }
 
     .brand img {
@@ -302,23 +296,19 @@ body {
         list-style: none;
         display: flex !important;
         flex-direction: row;
+        gap: 3rem;
         background: none;
         position: static;
         width: auto;
-        margin-right: 64px;
+        /* margin-right: 64px; */
         opacity: 1;
         clip-path: none;
         visibility: visible;
     }
 
-    .menu li {
-        margin: 0 15px;
-    }
-
     .menu a {
         text-decoration: none;
         color: var(--primary);
-        padding: 10px;
     }
 
     .overlay {

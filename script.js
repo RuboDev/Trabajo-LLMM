@@ -28,5 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
             overlay.classList.remove('active');
         });
     });
-    
+
+    /* Quitar active a menu desplegable y fondo borroso 
+     al cambiar a un tamaño grande de pantalla > 1024 */
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 1024) { // Ajusta según tu breakpoint
+            menu.classList.remove("active"); // Oculta el menú
+            overlay.classList.remove("active"); // Quita fondo borroso
+        }
+    });
 });

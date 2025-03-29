@@ -244,7 +244,7 @@ body {
 @media (min-width: 768px) {
     .container {
         grid-template:
-            "header header" 10vh
+            "header header" auto
             "sidebar main" auto
             "sidebar main" auto
             "footer footer" auto /
@@ -271,7 +271,7 @@ body {
 @media (min-width: 1024px) {
     .container {
         grid-template:
-            "header header header" 10vh
+            "header header header" auto
             "sidebar main main" auto
             "sidebar main main" auto
             "footer footer footer" auto / 
@@ -280,6 +280,11 @@ body {
 
     /* Ocultar botón del menú hamburguesa */
     .menu-toggle {
+        display: none;
+    }
+
+    /* Ocultar X */
+    .close-menu {
         display: none;
     }
 

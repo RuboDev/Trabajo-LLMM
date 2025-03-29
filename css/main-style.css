@@ -11,6 +11,12 @@ main {
     width: 100%;
 }
 
+.banner img{
+    border: var(--primary), 2px solid;
+    border-radius: 10px;
+    width: 100%;
+}
+
 /* SECCION BIENVENIDA */
 .bienvenida {
     background: var(--bg-color); /* Color de fondo acorde a tu diseño */

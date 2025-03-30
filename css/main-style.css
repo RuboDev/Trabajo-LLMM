@@ -17,24 +17,24 @@ main {
     width: 100%;
 }
 
-/* SECCION BIENVENIDA */
-.bienvenida {
-    background: var(--bg-color); /* Color de fondo acorde a tu diseño */
-    color: var(--text-color);
-    text-align: start;
-}
-
-.bienvenida-container {
+/* SECCIONES */
+.seccion {
     width: 100%;
     margin: 0 auto;
 }
 
-.bienvenida h1 {
+/* SECCION BIENVENIDA */
+#bienvenida-container {
+    color: var(--text-color);
+    text-align: start;
+}
+
+#bienvenida-container h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.bienvenida p {
+#bienvenida-container p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 1rem;
@@ -58,24 +58,14 @@ main {
 }
 
 /* SECCION MULTIMEDIA */
-.multimedia {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.multimedia-container img {
+#multimedia-container img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
 /* Otra seccion para ver si funciona correctamente*/
-.otro {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.otro-container img {
+#otro-container img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
@@ -87,7 +77,7 @@ main {
         flex-wrap: wrap;  /* Permite que los elementos salten de línea */
     }
 
-    .bienvenida, .multimedia, .otro {
+    .main-container > .seccion {
         flex: 1 1 calc(50% - 2rem); /* Ocupa el 50% menos el gap */
         width: calc(50% - 2rem); /* Evita que crezca más del 50% */
     }

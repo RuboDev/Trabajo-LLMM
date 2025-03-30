@@ -17,12 +17,6 @@ main {
     width: 100%;
 }
 
-/* SECCIONES */
-.seccion {
-    width: 100%;
-    margin: 0 auto;
-}
-
 /* SECCION BIENVENIDA */
 #bienvenida-container {
     color: var(--text-color);
@@ -57,15 +51,9 @@ main {
     color: var(--primary);
 }
 
-/* SECCION MULTIMEDIA */
-#multimedia-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Otra seccion para ver si funciona correctamente*/
-#otro-container img {
+/* TODAS LAS SECCIONES */
+/* Imágenes */
+.seccion > img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;

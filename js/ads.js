@@ -6,6 +6,11 @@ function updateAdImages() {
         img.src = isDesktop 
             ? "https://placehold.co/300x600" // Imagen vertical
             : "https://placehold.co/300x150"; // Imagen horizontal
+        
+        // Espera a que la imagen se cargue antes de hacerla visible
+        img.onload = () => {
+            img.style.visibility = "visible";
+        };
     });
 }
 

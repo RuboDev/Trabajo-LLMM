@@ -2,25 +2,20 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 4rem;
+    gap: 3rem;
     margin: 10% auto;
 }
 .social-links a {
     text-decoration: none;
     color: var(--bg-color);
-    font-size: 24px;
+    font-size: 3rem; /* Ajusta el tamaño de los iconos */
     transition: color 0.3s;
 }
 .social-links a:hover {
     color: #1da1f2; /* Color de Twitter */
 }
 
-.social-links i {
-    font-size: 3rem; /* Ajusta el tamaño de los iconos */
-}
-
 #siguenos {
-    margin-top: 5%;
     color: var(--bg-color);
     text-align: center;
 }

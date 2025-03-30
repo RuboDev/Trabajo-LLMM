@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 64px;
+    gap: 4rem;
     margin: 10% auto;
 }
 .social-links a {
@@ -16,7 +16,7 @@
 }
 
 .social-links i {
-    font-size: 64px; /* Ajusta el tamaño de los iconos */
+    font-size: 3rem; /* Ajusta el tamaño de los iconos */
 }
 
 #siguenos {

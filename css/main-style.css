@@ -17,8 +17,8 @@ main {
 }
 
 .banner img{
-    border: 2px solid var(--primary);
-    border-radius: 10px;
+    /* border: 2px solid var(--primary);
+    border-radius: 10px; */
     width: 100%;
     height: auto;
 }

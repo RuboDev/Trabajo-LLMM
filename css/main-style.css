@@ -24,17 +24,17 @@ main {
 }
 
 /* SECCION BIENVENIDA */
-#bienvenida-container {
+.texto {
     color: var(--text-color);
     text-align: start;
 }
 
-#bienvenida-container h1 {
+.texto h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-#bienvenida-container p {
+.texto p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 1rem;
@@ -71,6 +71,9 @@ main {
     .main-container{
         flex-direction: row;
         flex-wrap: wrap;  /* Permite que los elementos salten de línea */
+        gap: 3rem;
+        padding: 2rem 4rem;
+        width: 100%;
     }
 
     .main-container > .seccion {

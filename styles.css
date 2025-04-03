@@ -267,6 +267,10 @@ body {
         height: auto;
     }
 
+    .sidebar-container {
+        gap: 8rem;
+    }
+
     .footer-container {
         flex-direction: row;
         justify-content: space-around;

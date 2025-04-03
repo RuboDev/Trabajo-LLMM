@@ -47,7 +47,7 @@
 <body class="grid-layout">
     <header class="header">
         <div class="brand">
-            <a href="index.html" role="img" aria-label="Logo"><img src="img/main-logo.webp" alt="logo" width="150px" height="90"></a>
+            <a href="index.html" aria-label="Logo"><img src="img/main-logo.webp" alt="logo" width="150px" height="90"></a>
         </div>
         <nav>
             <div class="overlay"></div> <!-- Fondo borroso -->
@@ -58,17 +58,17 @@
                     <rect y="60" width="100" height="20"></rect>
                 </svg>
             </a>
-            <ul class="menu" id="menu">
-                <li class="close-menu"> <!-- botón X para cerrar menu -->
+            <ul class="menu" id="menu" role="menu">
+                <li class="close-menu" role="menuitem"> <!-- botón X para cerrar menu -->
                     <svg class="close" viewBox="0 0 100 100" width="40" height="40">
                         <line x1="10" y1="10" x2="90" y2="90" stroke="var(--secondary)" stroke-width="10"/>
                         <line x1="90" y1="10" x2="10" y2="90" stroke="var(--secondary)" stroke-width="10"/>
                     </svg>
                 </li>
-                <li><a href="index.html" role="menuitem" aria-label="Inicio">Inicio</a></li>
-                <li><a href="#" role="menuitem" aria-label="Servicios">Servicios</a></li>
-                <li><a href="#" role="menuitem" aria-label="Acerca de">Acerca de</a></li>
-                <li><a href="#contacto" role="menuitem" aria-label="Contacto">Contacto</a></li>
+                <li role="menuitem"><a href="index.html" aria-label="Inicio">Inicio</a></li>
+                <li role="menuitem"><a href="#" aria-label="Servicios">Servicios</a></li>
+                <li role="menuitem"><a href="#" aria-label="Acerca de">Acerca de</a></li>
+                <li role="menuitem"><a href="#contacto" aria-label="Contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -115,12 +115,12 @@
                 <h3>Publicidad</h3>
                 <div class="ads-container">
                     <div class="ad">
-                        <a href="#" role="banner" aria-label="Anuncio publicitario" target="_blank">
+                        <a href="#" aria-label="Anuncio publicitario" target="_blank">
                             <img src="https://placehold.co/300x150" alt="Anuncio" loading="lazy">
                         </a>
                     </div>
                     <div class="ad">
-                        <a href="#" role="banner" aria-label="Anuncio publicitario" target="_blank">
+                        <a href="#" aria-label="Anuncio publicitario" target="_blank">
                             <img src="https://placehold.co/300x150" alt="Anuncio" loading="lazy">
                         </a>
                     </div>

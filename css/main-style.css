@@ -11,10 +11,16 @@ main {
     width: 100%;
 }
 
+/* BANNER */
+.banner {
+    width: 100%;
+}
+
 .banner img{
-    border: var(--primary), 2px solid;
+    border: 2px solid var(--primary);
     border-radius: 10px;
     width: 100%;
+    height: auto;
 }
 
 /* SECCION BIENVENIDA */
@@ -57,6 +63,7 @@ main {
     max-width: 100%;
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
     border-radius: 10px;
 }
 

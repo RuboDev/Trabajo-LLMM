@@ -4,8 +4,8 @@ function updateAdImages() {
 
     ads.forEach(img => {
         img.src = isDesktop 
-            ? "https://placehold.co/300x600" // Imagen vertical
-            : "https://placehold.co/300x150"; // Imagen horizontal
+            ? "img/300x600.svg" // Imagen vertical
+            : "img/300x150.svg"; // Imagen horizontal
         
         // Espera a que la imagen se cargue antes de hacerla visible
         img.onload = () => {

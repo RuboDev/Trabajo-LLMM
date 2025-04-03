@@ -7,18 +7,21 @@ document.addEventListener("DOMContentLoaded", function() {
     menuToggle.addEventListener("click", function() {
         menu.classList.toggle("active");
         overlay.classList.toggle("active");
+        menuToggle.setAttribute('aria-expanded', 'true'); // Actualizar aria-expanded a true
     });
 
     // Función para cerrar el menú al hacer clic en la "X"
     closeIcon.addEventListener("click", () => {
         menu.classList.remove("active");
         overlay.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false'); // Actualizar aria-expanded a false
     });
 
     // Cerrar menú al hacer clic en el fondo borroso
     overlay.addEventListener('click', () => {
         menu.classList.remove('active');
         overlay.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false'); // Actualizar aria-expanded a false
     });
 
     // Cerrar el menú y quitar fondo borroso al hacer click en cualquier link del menu
@@ -26,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         link.addEventListener('click', () => {
             menu.classList.remove('active');
             overlay.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false'); // Actualizar aria-expanded a false
         });
     });
 
@@ -35,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (window.innerWidth > 1024) { // Ajusta según tu breakpoint
             menu.classList.remove("active"); // Oculta el menú
             overlay.classList.remove("active"); // Quita fondo borroso
+            menuToggle.setAttribute('aria-expanded', 'false'); // Actualizar aria-expanded a false
         }
     });
 });

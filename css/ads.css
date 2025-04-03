@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.ad-section h3 {
+    color: var(--bg-color);
+}
+
 .ad{
     width: 100%;
     height: 100%;

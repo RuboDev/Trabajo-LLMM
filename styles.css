@@ -88,8 +88,8 @@ body {
 }
 
 .menu a:hover {
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    color: var(--primary);
+    /* background-color: var(--bg-color); */
     border-radius: 1rem;
 }
 
@@ -210,7 +210,7 @@ body {
 /* Footer */
 .footer {
     grid-area: footer;
-    color: var(--primary);
+    color: var(--bg-color);
     background-color: var(--secondary);
     padding: 1.5rem;
 }
@@ -320,7 +320,7 @@ body {
 
     .menu a {
         text-decoration: none;
-        color: var(--primary);
+        color: var(--bg-color);
     }
 
     .overlay {

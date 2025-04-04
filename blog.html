@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Ciberescudo</title>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .post {
+      background: #1b1b1b;
+      padding: 1rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .post:hover {
+      transform: translateY(-5px);
+      background-color: #222;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+    }
+
+    aside {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    aside h3 {
+      margin-top: 0;
+    }
+
+    aside ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    aside li {
+      margin-bottom: 0.5rem;
+    }
+
+    aside a {
+      color: #1e90ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <section class="grid">
+    <div class="post">
+      <img src="noticia1.jpg" alt="noticia">
+      <h3>Nuestro nuevo sistema de detección de intrusos</h3>
+      <p>Descubre cómo el IDS de Ciberescudo está revolucionando la ciberdefensa empresarial.</p>
+    </div>
+    <div class="post">
+      <img src="noticia2.jpg" alt="noticia">
+      <h3>Mejoras en nuestros firewalls</h3>
+      <p>Más rápidos, más inteligentes. Conoce las últimas mejoras.</p>
+    </div>
+  </section>
+
+  <aside>
+    <h3>Noticias recientes</h3>
+    <ul>
+      <li><a href="#">[Marzo 2025] Lanzamiento de nuestra IA defensiva</a></li>
+      <li><a href="#">[Febrero 2025] Caso de éxito: defensa ante ataque ransomware</a></li>
+      <li><a href="#">[Enero 2025] Nuevo equipo técnico en Europa</a></li>
+    </ul>
+  </aside>
+</body>
+</html>

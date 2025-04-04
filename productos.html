@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciberescudo | Productos y Servicios</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: #fff;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 1rem;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        main {
+            margin-top: 100px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .info {
+            position: relative;
+            padding: 1rem;
+            border: 1px solid #444;
+            margin-bottom: 2rem;
+        }
+
+        .info::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 100%;
+            background: #1e90ff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #222;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            border: 1px solid #444;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        img.producto {
+            width: 100px;
+            height: auto;
+            transition: transform 0.5s ease, filter 0.5s ease;
+            filter: grayscale(50%);
+        }
+
+        img.producto:hover {
+            transform: scale(1.2) rotate(3deg);
+            filter: grayscale(0%) brightness(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Catálogo de Productos y Servicios</h1>
+    </header>
+
+    <main>
+        <section class="info" style="position: relative;">
+            <h2>Servicios Disponibles</h2>
+            <table>
+                <tr>
+                    <th>Servicio</th>
+                    <th>Descripción</th>
+                    <th>Imagen</th>
+                </tr>
+                <tr>
+                    <td>Auditoría de Seguridad</td>
+                    <td>Evaluación completa de la infraestructura digital.</td>
+                    <td><img src="auditoria.jpg" class="producto" alt="Auditoría"></td>
+                </tr>
+                <tr>
+                    <td>Respuesta ante Incidentes</td>
+                    <td>Asistencia inmediata en caso de ataque.</td>
+                    <td><img src="respuesta.jpg" class="producto" alt="Incidentes"></td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="info" style="position: static;">
+            <h2>Productos</h2>
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Características</th>
+                    <th>Imagen</th>
+                </tr>
+                <tr>
+                    <td>Firewall NG</td>
+                    <td>Protección avanzada para redes empresariales.</td>
+                    <td><img src="firewall.jpg" class="producto" alt="Firewall"></td>
+                </tr>
+                <tr>
+                    <td>Antivirus IA</td>
+                    <td>Detección con inteligencia artificial en tiempo real.</td>
+                    <td><img src="antivirus.jpg" class="producto" alt="Antivirus"></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

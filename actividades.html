@@ -11,33 +11,35 @@
 
 <body class="grid-layout">
     <header class="header">
-        <div class="brand">
-            <a href="index.html" aria-label="Logo"><img src="img/main-logo.webp" alt="logo" width="150px" height="90"></a>
-        </div>
-        <nav>
-            <div class="overlay"></div> <!-- Fondo borroso -->
-            <a class="menu-toggle" href="#" role="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
-                <svg class="burger" viewBox="0 0 100 80" width="40" height="40">
-                    <rect width="100" height="20"></rect>
-                    <rect y="30" width="100" height="20"></rect>
-                    <rect y="60" width="100" height="20"></rect>
-                </svg>
-            </a>
-            <ul class="menu" id="menu" role="menu">
-                <li class="close-menu" role="menuitem"> <!-- botón X para cerrar menu -->
-                    <svg class="close" viewBox="0 0 100 100" width="40" height="40">
-                        <line x1="10" y1="10" x2="90" y2="90" stroke="var(--secondary)" stroke-width="10"/>
-                        <line x1="90" y1="10" x2="10" y2="90" stroke="var(--secondary)" stroke-width="10"/>
+        <div class="header-container">
+            <div class="brand">
+                <a href="index.html" aria-label="Logo"><img src="img/main-logo.webp" alt="logo" width="150px" height="90"></a>
+            </div>
+            <nav>
+                <div class="overlay"></div> <!-- Fondo borroso -->
+                <a class="menu-toggle" href="#" role="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                    <svg class="burger" viewBox="0 0 100 80" width="40" height="40">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
                     </svg>
-                </li>
-                <li role="menuitem"><a href="index.html" aria-label="Inicio">Inicio</a></li>
-                <li role="menuitem"><a href="actividades.html" aria-label="Actividades">Actividades</a></li>
-                <li role="menuitem"><a href="productos.html" aria-label="Productos y Servicios">Productos y Servicios</a></li>
-                <li role="menuitem"><a href="blog.html" aria-label="Blog">Blog</a></li>
-                <li role="menuitem"><a href="empleo.html" aria-label="Empleo">Empleo</a></li>
-                <li role="menuitem"><a href="contacto.html" aria-label="Contacto">Contacto</a></li>
-            </ul>
-        </nav>
+                </a>
+                <ul class="menu" id="menu" role="menu">
+                    <li class="close-menu" role="menuitem"> <!-- botón X para cerrar menu -->
+                        <svg class="close" viewBox="0 0 100 100" width="40" height="40">
+                            <line x1="10" y1="10" x2="90" y2="90" stroke="var(--secondary)" stroke-width="10"/>
+                            <line x1="90" y1="10" x2="10" y2="90" stroke="var(--secondary)" stroke-width="10"/>
+                        </svg>
+                    </li>
+                    <li role="menuitem"><a href="index.html" aria-label="Inicio">Inicio</a></li>
+                    <li role="menuitem"><a href="actividades.html" aria-label="Actividades">Actividades</a></li>
+                    <li role="menuitem"><a href="productos.html" aria-label="Productos y Servicios">Productos y Servicios</a></li>
+                    <li role="menuitem"><a href="blog.html" aria-label="Blog">Blog</a></li>
+                    <li role="menuitem"><a href="empleo.html" aria-label="Empleo">Empleo</a></li>
+                    <li role="menuitem"><a href="contacto.html" aria-label="Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main class="main">

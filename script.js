@@ -4,6 +4,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const overlay = document.querySelector(".overlay");
     const closeIcon = document.querySelector(".close-menu");
 
+    // Ajustar Paddings de main y sidebar para poder tener el header fixed
+    window.addEventListener('load', adjustMainPadding);
+    window.addEventListener('resize', adjustMainPadding);
+    
+    if (document.querySelector(".sidebar")) {
+        window.addEventListener('load', adjustSidebarPadding);
+        window.addEventListener('resize', adjustSidebarPadding);
+    }
+
+
     menuToggle.addEventListener("click", function() {
         menu.classList.toggle("active");
         overlay.classList.toggle("active");
@@ -43,3 +53,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+function adjustMainPadding() {
+    const header = document.querySelector('.header');
+    const main = document.querySelector('.main');
+    const headerHeight = header.offsetHeight;
+    main.style.paddingTop = `${headerHeight}px`;
+}
+
+function adjustSidebarPadding() {
+    const header = document.querySelector('.header');
+    const sidebar = document.querySelector('.sidebar');
+    const headerHeight = header.offsetHeight;
+    sidebar.style.paddingTop = `${headerHeight}px`;
+}

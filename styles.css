@@ -8,16 +8,40 @@
 :root {
     --bg-color: #e9e0df;
     --primary: #D73964;
-    --secondary:  #3A3335;
+    --secondary: #3A3335;
     --accent-color: #8a2f3e;
 
     --text-color: #2C1A1D;
     --font-main: 'Fira Code', monospace;
 }
 
+/* Chrome, Safari, Edge */
+/* ::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+} */
+
 /* ESTILOS GENERALES a nivel documento - HTML y Body */
 html {
     height: 100%;
+    overflow-y: scroll;
+
+    /* Firefox scroll-bar style*/
+    /* scrollbar-color: var(--primary) var(--bg-color);
+    scrollbar-width: thin; */
+    /* scrollbar-gutter: stable; */
 }
 
 body {
@@ -38,17 +62,23 @@ body {
 }
 
 /* SECCIONES DE LA PÁGINA */
-/* Header con Flex */
+/* Header*/
 .header {
+    grid-area: header;
+    position: fixed;
+    min-width: 100%;
+    max-height: fit-content;
+}
+
+/* Header container - Flex */
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-area: header;
     padding: 0.5rem;
     background: var(--secondary);
     color: var(--bg-color);
     position: relative;
-    max-height: fit-content;
 }
 
 /*Logo*/
@@ -58,9 +88,12 @@ body {
 
 
 .brand img {
-    width: 100%; /* Que se adapte al contenedor */
-    max-width: 96px; /* No crezca más de 96px */
-    height: auto; /* Mantiene la proporción */
+    width: 100%;
+    /* Que se adapte al contenedor */
+    max-width: 96px;
+    /* No crezca más de 96px */
+    height: auto;
+    /* Mantiene la proporción */
 }
 
 
@@ -76,7 +109,8 @@ body {
 
     /* Animación */
     opacity: 0;
-    clip-path: inset(0 0 100% 0); /* Oculta el menú */
+    clip-path: inset(0 0 100% 0);
+    /* Oculta el menú */
     transition: clip-path 0.5s ease-out, opacity 0.5s ease-out;
     visibility: hidden;
     z-index: 10;
@@ -109,7 +143,8 @@ body {
 .menu.active {
     display: flex;
     opacity: 1;
-    clip-path: inset(0 0 0 0); /* Muestra el menú */
+    clip-path: inset(0 0 0 0);
+    /* Muestra el menú */
     visibility: visible;
 }
 
@@ -119,34 +154,44 @@ body {
     position: absolute;
     top: 0;
     right: 30px;
-    filter: drop-shadow(0px 0px 3px #d1bfbdc7); /* Sombra alrededor de la "X" */
-    transition: all 0.4s ease; /* Transición suave para todos los cambios */
+    filter: drop-shadow(0px 0px 3px #d1bfbdc7);
+    /* Sombra alrededor de la "X" */
+    transition: all 0.4s ease;
+    /* Transición suave para todos los cambios */
     opacity: 0;
     visibility: hidden;
 }
 
 .close line {
-    stroke-width: 12px; /* Aumentamos el grosor de las líneas al hacer hover */
-    stroke: var(--secondary); /* Color de las líneas de la "X" */
-    transition: all 1.7s ease; /* Transición suave para todos los cambios */
+    stroke-width: 12px;
+    /* Aumentamos el grosor de las líneas al hacer hover */
+    stroke: var(--secondary);
+    /* Color de las líneas de la "X" */
+    transition: all 1.7s ease;
+    /* Transición suave para todos los cambios */
 }
 
 /* Hover líneas de la "X" */
 .close:hover line {
-    stroke-width: 16px; /* Aumentamos el grosor de las líneas al hacer hover */
-    stroke: var(--primary); /* Color de las líneas de la "X" */
+    stroke-width: 16px;
+    /* Aumentamos el grosor de las líneas al hacer hover */
+    stroke: var(--primary);
+    /* Color de las líneas de la "X" */
 }
 
 /* Hover del item */
 .close-menu:hover {
-    transform: scale(1.1); /* Agrandamos un poco el icono para hacerlo más llamativo */
-    filter: drop-shadow(0px 0px 3px #3A3335); /* Sombra alrededor de la "X" */
+    transform: scale(1.1);
+    /* Agrandamos un poco el icono para hacerlo más llamativo */
+    filter: drop-shadow(0px 0px 3px #3A3335);
+    /* Sombra alrededor de la "X" */
 }
 
 /* Mostrar el icono de la "X" cuando el menú está abierto */
 .menu.active .close-menu {
     /* display: block; */
-    opacity: 1; /* Hacemos el icono visible */
+    opacity: 1;
+    /* Hacemos el icono visible */
     visibility: visible;
 }
 
@@ -157,10 +202,13 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
-    backdrop-filter: blur(5px); /* Aplica el efecto borroso */
+    background: rgba(0, 0, 0, 0.5);
+    /* Oscurece el fondo */
+    backdrop-filter: blur(5px);
+    /* Aplica el efecto borroso */
     opacity: 0;
-    pointer-events: none; /* Evita que interfiera cuando está oculto */
+    pointer-events: none;
+    /* Evita que interfiera cuando está oculto */
     transition: opacity 0.3s ease;
     z-index: 5;
 }
@@ -172,13 +220,15 @@ body {
 
 /* BURGER */
 .burger {
-    width: 50%; /* tamaño en pantallas pequeñas de la burger */
+    width: 50%;
+    /* tamaño en pantallas pequeñas de la burger */
     height: auto;
 }
 
 /* Estilos para el svg burger */
 .burger rect {
-    fill: var(--primary); /* Color del icono */
+    fill: var(--primary);
+    /* Color del icono */
     transition: fill 0.3s;
 }
 
@@ -265,7 +315,8 @@ body {
     }
 
     .burger {
-        width: 75%; /* tamaño en pantallas medianas de la burger */
+        width: 75%;
+        /* tamaño en pantallas medianas de la burger */
         height: auto;
     }
 
@@ -287,8 +338,7 @@ body {
             "header header header" auto
             "sidebar main main" auto
             "sidebar main main" auto
-            "footer footer footer" auto / 
-            1fr 5fr;
+            "footer footer footer" auto / 1fr 5fr;
     }
 
     /* Ocultar botón del menú hamburguesa */
@@ -306,7 +356,8 @@ body {
     }
 
     .brand img {
-        max-width: 112px; /* aumenta el tamaño en pantallas superiores a 600px de ancho */
+        max-width: 112px;
+        /* aumenta el tamaño en pantallas superiores a 600px de ancho */
     }
 
     /* Mostrar el menú en su posición normal */

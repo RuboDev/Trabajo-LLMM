@@ -48,6 +48,7 @@ body {
     background: var(--secondary);
     color: var(--bg-color);
     position: relative;
+    max-height: fit-content;
 }
 
 /*Logo*/
@@ -213,6 +214,7 @@ body {
     color: var(--bg-color);
     background-color: var(--secondary);
     padding: 1.5rem;
+    /* max-height: fit-content; */
 }
 
 .footer-container {

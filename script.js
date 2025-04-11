@@ -1,20 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");
     const overlay = document.querySelector(".overlay");
     const closeIcon = document.querySelector(".close-menu");
+    let lastScrollY = window.scrollY;
+    const header = document.querySelector('.header');
+
+    // Esconder header al hacer scroll hacia abajo, reaparece hacia arriba
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY > 150) {
+            // Scroll hacia abajo
+            header.classList.add('hide');
+        } else {
+            // Scroll hacia arriba
+            header.classList.remove('hide');
+        }
+
+        lastScrollY = currentScrollY;
+    });
+
 
     // Ajustar Paddings de main y sidebar para poder tener el header fixed
     window.addEventListener('load', adjustMainPadding);
     window.addEventListener('resize', adjustMainPadding);
-    
+
     if (document.querySelector(".sidebar")) {
         window.addEventListener('load', adjustSidebarPadding);
         window.addEventListener('resize', adjustSidebarPadding);
     }
 
 
-    menuToggle.addEventListener("click", function() {
+    menuToggle.addEventListener("click", function () {
         menu.classList.toggle("active");
         overlay.classList.toggle("active");
         menuToggle.setAttribute('aria-expanded', 'true'); // Actualizar aria-expanded a true

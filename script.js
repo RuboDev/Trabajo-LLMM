@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Esconder header al hacer scroll hacia abajo, reaparece hacia arriba
     window.addEventListener('scroll', () => {
+
+        if (document.querySelector(".menu.active")) { // return si el menu hamburguesa está activo
+            return
+        }
+
         const currentScrollY = window.scrollY;
 
         if (currentScrollY > lastScrollY && currentScrollY > 150) {

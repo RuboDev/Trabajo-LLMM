@@ -2,127 +2,153 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ciberescudo | Productos y Servicios</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0f0f0f;
-            color: #fff;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #1a1a1a;
-            text-align: center;
-            padding: 1rem;
-            z-index: 1000;
-            border-bottom: 1px solid #333;
-        }
-
-        main {
-            margin-top: 100px;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .info {
-            position: relative;
-            padding: 1rem;
-            border: 1px solid #444;
-            margin-bottom: 2rem;
-        }
-
-        .info::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 10px;
-            height: 100%;
-            background: #1e90ff;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #222;
-            margin-top: 1rem;
-        }
-
-        th,
-        td {
-            border: 1px solid #444;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        img.producto {
-            width: 100px;
-            height: auto;
-            transition: transform 0.5s ease, filter 0.5s ease;
-            filter: grayscale(50%);
-        }
-
-        img.producto:hover {
-            transform: scale(1.2) rotate(3deg);
-            filter: grayscale(0%) brightness(1.2);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/productos.css" />
 </head>
 
 <body>
-    <header>
-        <h1>Catálogo de Productos y Servicios</h1>
+    <header class="header">
+        <div class="header-container">
+            <div class="brand">
+                <a href="index.html" aria-label="Logo"><img src="img/main-logo.webp" alt="logo" width="150px"
+                        height="90" /></a>
+            </div>
+            <nav>
+                <div class="overlay"></div>
+                <!-- Fondo borroso -->
+                <a class="menu-toggle" href="#" role="button" aria-controls="menu" aria-expanded="false"
+                    aria-label="Abrir menú">
+                    <svg class="burger" viewBox="0 0 100 80" width="40" height="40">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                </a>
+                <ul class="menu" id="menu" role="menu">
+                    <li class="close-menu" role="menuitem">
+                        <!-- botón X para cerrar menu -->
+                        <svg class="close" viewBox="0 0 100 100" width="40" height="40">
+                            <line x1="10" y1="10" x2="90" y2="90" stroke="var(--secondary)" stroke-width="10" />
+                            <line x1="90" y1="10" x2="10" y2="90" stroke="var(--secondary)" stroke-width="10" />
+                        </svg>
+                    </li>
+                    <li role="menuitem">
+                        <a href="index.html" aria-label="Inicio">Inicio</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="actividades.html" aria-label="Actividades">Actividades</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="productos.html" aria-label="Productos y Servicios">Productos y Servicios</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="blog.html" aria-label="Blog">Blog</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="empleo.html" aria-label="Empleo">Empleo</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="contacto.html" aria-label="Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="info" style="position: relative;">
-            <h2>Servicios Disponibles</h2>
-            <table>
-                <tr>
-                    <th>Servicio</th>
-                    <th>Descripción</th>
-                    <th>Imagen</th>
-                </tr>
-                <tr>
-                    <td>Auditoría de Seguridad</td>
-                    <td>Evaluación completa de la infraestructura digital.</td>
-                    <td><img src="auditoria.jpg" class="producto" alt="Auditoría"></td>
-                </tr>
-                <tr>
-                    <td>Respuesta ante Incidentes</td>
-                    <td>Asistencia inmediata en caso de ataque.</td>
-                    <td><img src="respuesta.jpg" class="producto" alt="Incidentes"></td>
-                </tr>
-            </table>
-        </section>
+    <main class="main">
+        <h1>Catálogo de Productos y Servicios</h1>
+        <div class="main-container">
+            <section class="info">
+                
+                <div class="table-responsive">
+                    <h2>Servicios Disponibles</h2>
+                    <table>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                    </tr>
+                    <tr>
+                        <td>Auditoría de Seguridad</td>
+                        <td>Evaluación completa de la infraestructura digital.</td>
+                        <td>
+                            <img src="auditoria.jpg" class="producto" alt="Auditoría" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Respuesta ante Incidentes</td>
+                        <td>Asistencia inmediata en caso de ataque.</td>
+                        <td>
+                            <img src="respuesta.jpg" class="producto" alt="Incidentes" />
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </section>
 
-        <section class="info" style="position: static;">
-            <h2>Productos</h2>
-            <table>
-                <tr>
-                    <th>Producto</th>
-                    <th>Características</th>
-                    <th>Imagen</th>
-                </tr>
-                <tr>
-                    <td>Firewall NG</td>
-                    <td>Protección avanzada para redes empresariales.</td>
-                    <td><img src="firewall.jpg" class="producto" alt="Firewall"></td>
-                </tr>
-                <tr>
-                    <td>Antivirus IA</td>
-                    <td>Detección con inteligencia artificial en tiempo real.</td>
-                    <td><img src="antivirus.jpg" class="producto" alt="Antivirus"></td>
-                </tr>
-            </table>
-        </section>
+            <section class="info">
+                <div class="table-responsive">
+                    <h2>Productos</h2>
+                <table>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Características</th>
+                        <th>Imagen</th>
+                    </tr>
+                    <tr>
+                        <td>Firewall NG</td>
+                        <td>Protección avanzada para redes empresariales.</td>
+                        <td>
+                            <img src="firewall.jpg" class="producto" alt="Firewall" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Antivirus IA</td>
+                        <td>Detección con inteligencia artificial en tiempo real.</td>
+                        <td>
+                            <img src="img/productos/antivirus-ai.webp" class="producto" alt="Antivirus" />
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </section>
+        </div>
     </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info" id="contacto">
+                <h3>Contacto</h3>
+                <p><strong>Email:</strong> contacto@empresa.com</p>
+                <p><strong>Teléfono:</strong> +34 123 456 789</p>
+                <p><strong>Horario:</strong> Lunes a Viernes, 9:00 - 18:00</p>
+            </div>
+            <div class="footer-info" id="location">
+                <h3>Ubicación</h3>
+                <!-- <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6160.866377570045!2d-0.47532831055149527!3d39.459541398406834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6050412e0df053%3A0x11f0149d167eaef7!2sIES%20Salvador%20Gadea!5e0!3m2!1ses!2ses!4v1743072094879!5m2!1ses!2ses"
+                    width="275" 
+                    height="150" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de la empresa en google maps">
+                    </iframe>
+                </div> -->
+            </div>
+            <div class="footer-info" id="derechos">
+                <p>
+                    &copy; 2025 Ciberescudo - Seguridad informática integral. Todos los
+                    derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

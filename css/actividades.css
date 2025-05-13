@@ -22,7 +22,7 @@ main {
 }
 
 .seccion {
-    background-color: var(--secondary);
+    background-color: white;
     color: var(--primary);
     padding: 1rem;
     border: 1px solid var(--primary);
@@ -37,7 +37,7 @@ main {
 .image-float {
     float: right;
     margin: 0 0 1rem 1rem;
-    width: 100px;
+    width: 200px;
     height: auto;
 }
 

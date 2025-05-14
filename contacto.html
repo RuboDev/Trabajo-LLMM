@@ -4,79 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <title>Ciberescudo | Contacto</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #eee;
-            font-family: Arial, sans-serif;
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .panel {
-            background-color: #1c1c1c;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #333;
-        }
-
-        h2 {
-            border-bottom: 1px solid #444;
-            padding-bottom: 0.5rem;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        a {
-            color: #1e90ff;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 
 <body>
-    <div class="panel">
-        <h2>Información de contacto</h2>
-        <p>📍 Oficinas centrales: Calle Seguridad 42, Madrid</p>
-        <p>📞 Teléfono: +34 912 345 678</p>
-        <p>📧 Email: contacto@ciberescudo.com</p>
-        <p>🌐 Redes: <a href="#">Twitter</a> | <a href="#">LinkedIn</a></p>
-    </div>
-    <div class="footer-info" id="location">
-                <h3>Ubicación</h3>
-                <!-- <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6160.866377570045!2d-0.47532831055149527!3d39.459541398406834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6050412e0df053%3A0x11f0149d167eaef7!2sIES%20Salvador%20Gadea!5e0!3m2!1ses!2ses!4v1743072094879!5m2!1ses!2ses"
-                    width="275" 
-                    height="150" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Ubicación de la empresa en google maps">
-                    </iframe>
-                </div> -->
+    <header class="header">
+        <div class="header-container">
+            <div class="brand">
+                <a href="index.html" aria-label="Logo"><img src="img/main-logo.webp" alt="logo" width="150px"
+                        height="90" /></a>
+            </div>
+            <nav>
+                <div class="overlay"></div>
+                <!-- Fondo borroso -->
+                <a class="menu-toggle" href="#" role="button" aria-controls="menu" aria-expanded="false"
+                    aria-label="Abrir menú">
+                    <svg class="burger" viewBox="0 0 100 80" width="40" height="40">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                </a>
+                <ul class="menu" id="menu" role="menu">
+                    <li class="close-menu" role="menuitem">
+                        <!-- botón X para cerrar menu -->
+                        <svg class="close" viewBox="0 0 100 100" width="40" height="40">
+                            <line x1="10" y1="10" x2="90" y2="90" stroke="var(--secondary)" stroke-width="10" />
+                            <line x1="90" y1="10" x2="10" y2="90" stroke="var(--secondary)" stroke-width="10" />
+                        </svg>
+                    </li>
+                    <li role="menuitem">
+                        <a href="index.html" aria-label="Inicio">Inicio</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="actividades.html" aria-label="Actividades">Actividades</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="productos.html" aria-label="Productos y Servicios">Productos y Servicios</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="blog.html" aria-label="Blog">Blog</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="empleo.html" aria-label="Empleo">Empleo</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="contacto.html" aria-label="Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main-container">
+            <div class="panel">
+                <h2>Información de contacto</h2>
+                <div class="panel-content">
+                    <p>📍 Oficinas centrales: Calle Seguridad 42, Madrid</p>
+                    <p>📞 Teléfono: +34 912 345 678</p>
+                    <p>📧 Email: contacto@ciberescudo.com</p>
+                    <p>🌐 Redes: <a href="#">Twitter</a> | <a href="#">LinkedIn</a></p>
+                </div>
             </div>
 
-    <div class="panel">
-        <h2>Cláusulas RGPD</h2>
-        <p>Los datos recogidos en este sitio serán tratados conforme al Reglamento General de Protección de Datos (UE
-            2016/679).</p>
-        <p>El usuario puede solicitar acceso, rectificación o eliminación de sus datos escribiendo a nuestro correo de
-            privacidad.</p>
-    </div>
+            <div class="panel">
+                <h2>Cláusulas RGPD</h2>
+                <div class="panel-content">
+                    <p>Los datos recogidos en este sitio serán tratados conforme al Reglamento General de Protección de
+                        Datos (UE
+                        2016/679).</p>
+                    <p>El usuario puede solicitar acceso, rectificación o eliminación de sus datos escribiendo a nuestro
+                        correo de
+                        privacidad.</p>
+                </div>
+            </div>
 
-    <div class="panel">
-        <h2>Enlaces de interés</h2>
-        <ul>
-            <li><a href="#">Agencia Española de Protección de Datos</a></li>
-            <li><a href="#">INCIBE - Ciberseguridad para empresas</a></li>
-            <li><a href="#">Normativa Europea sobre ciberseguridad</a></li>
-        </ul>
-    </div>
+            <div class="panel">
+                <h2>Enlaces de interés</h2>
+                <ul>
+                    <li><a href="#">Agencia Española de Protección de Datos</a></li>
+                    <li><a href="#">INCIBE - Ciberseguridad para empresas</a></li>
+                    <li><a href="#">Normativa Europea sobre ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="panel" id="location">
+                <h2>Ubicación</h2>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6160.866377570045!2d-0.47532831055149527!3d39.459541398406834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6050412e0df053%3A0x11f0149d167eaef7!2sIES%20Salvador%20Gadea!5e0!3m2!1ses!2ses!4v1743072094879!5m2!1ses!2ses"
+                        width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Ubicación de la empresa en google maps">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info" id="contacto">
+                <h3>Contacto</h3>
+                <p><strong>Email:</strong> contacto@empresa.com</p>
+                <p><strong>Teléfono:</strong> +34 123 456 789</p>
+                <p><strong>Horario:</strong> Lunes a Viernes, 9:00 - 18:00</p>
+            </div>
+
+            <div class="footer-info" id="derechos">
+                <p>&copy; 2025 Ciberescudo - Seguridad informática integral. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

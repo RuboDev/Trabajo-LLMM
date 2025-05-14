@@ -25,7 +25,7 @@ h1 {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
     gap: 2rem;
 }
 
@@ -57,6 +57,12 @@ h1 {
     font-size: 1rem;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
 form label {
     display: block;
     margin-top: 1rem;
@@ -85,6 +91,8 @@ button {
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
+    align-items: start;
+    width: 40%;
 }
 
 button:hover {

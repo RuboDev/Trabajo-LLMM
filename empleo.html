@@ -81,7 +81,7 @@
 
                 <section class="panel formulario-panel">
                     <h2>Formulario de solicitud</h2>
-                    <form id="formulario">
+                    <form id="formulario" novalidate>
                         <label for="nombre">Nombre completo:
                             <input type="text" id="nombre" name="nombre">
                             <span id="errorNombre" class="error"></span>
@@ -123,46 +123,61 @@
 
     <script src="script.js"></script>
     <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevenir envío hasta verificar
+            
+            let valid = true;
 
-    document.getElementById("formulario").addEventListener("submit", function (event) {
-        event.preventDefault(); // No enviar hasta verificar
+            // Obtener elementos
+            const nombre = document.getElementById("nombre");
+            const email = document.getElementById("email");
+            const mensaje = document.getElementById("mensaje");
 
-        let valid = true;
+            const errorNombre = document.getElementById("errorNombre");
+            const errorEmail = document.getElementById("errorEmail");
+            const errorMensaje = document.getElementById("errorMensaje");
 
-        const nombre = document.getElementById("nombre");
-        const email = document.getElementById("email");
-        const mensaje = document.getElementById("mensaje");
-
-        const errorNombre = document.getElementById("errorNombre");
-        const errorEmail = document.getElementById("errorEmail");
-        const errorMensaje = document.getElementById("errorMensaje");
-
-        // Validación de nombre (letras y espacios, mínimo 3)
-        if (!/^[A-Za-z\s]{3,50}$/.test(nombre.value.trim())) {
-            errorNombre.textContent = "Introduce un nombre válido (solo letras y espacios, 3-50 caracteres).";
-            valid = false;
-        } else {
+            // Resetear mensajes de error
             errorNombre.textContent = "";
-        }
-
-        // Validación de email
-        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value.trim())) {
-            errorEmail.textContent = "Introduce un correo válido.";
-            valid = false;
-        } else {
             errorEmail.textContent = "";
-        }
+            errorMensaje.textContent = "";
 
-        // Validación de mensaje
-        if (mensaje.value.trim().length < 5) {
-            errorMensaje.textContent = "Por favor, escribe un mensaje más largo.";
-            valid = false;
-        }
+            // Validación de nombre (letras y espacios, mínimo 3)
+            const nombreValue = nombre.value.trim();
+            if (nombreValue === "") {
+                errorNombre.textContent = "El nombre es obligatorio.";
+                valid = false;
+            } else if (!/^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,50}$/.test(nombreValue)) {
+                errorNombre.textContent = "Introduce un nombre válido (solo letras y espacios, 3-50 caracteres).";
+                valid = false;
+            }
 
-        // Si todo es válido, se envía
-        if (valid) {
-            this.submit();
-        }
+            // Validación de email
+            const emailValue = email.value.trim();
+            if (emailValue === "") {
+                errorEmail.textContent = "El email es obligatorio.";
+                valid = false;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
+                errorEmail.textContent = "Introduce un correo válido (ejemplo: usuario@dominio.com).";
+                valid = false;
+            }
+
+            // Validación de mensaje
+            const mensajeValue = mensaje.value.trim();
+            if (mensajeValue === "") {
+                errorMensaje.textContent = "El mensaje es obligatorio.";
+                valid = false;
+            } else if (mensajeValue.length < 5) {
+                errorMensaje.textContent = "El mensaje debe tener al menos 5 caracteres.";
+                valid = false;
+            }
+
+            // Si todo es válido, se envía
+            if (valid) {
+                this.submit();
+            }
+        });
     });
 </script>
 

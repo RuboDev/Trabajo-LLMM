@@ -83,17 +83,18 @@
                     <h2>Formulario de solicitud</h2>
                     <form id="formulario">
                         <label for="nombre">Nombre completo:
-                            <input type="text" id="nombre" name="nombre" pattern="[A-Za-z\s]{3,50}" required>
+                            <input type="text" id="nombre" name="nombre">
                             <span id="errorNombre" class="error"></span>
                         </label>
 
                         <label for="email">Email:
-                            <input type="email" id="email" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+                            <input type="email" id="email" name="email">
                             <span id="errorEmail" class="error"></span>
                         </label>
 
                         <label for="mensaje">Mensaje:
-                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                            <span id="errorMensaje" class="error"></span>
                         </label>
 
                         <button type="submit">Enviar solicitud</button>
@@ -122,32 +123,53 @@
 
     <script src="script.js"></script>
     <script>
-        document.getElementById("formulario").addEventListener("submit", function (event) {
-            let valid = true;
+    // Evita los mensajes nativos del navegador
+    document.querySelectorAll("input, textarea").forEach(input => {
+        input.addEventListener("invalid", e => e.preventDefault());
+    });
 
-            const nombre = document.getElementById("nombre");
-            const email = document.getElementById("email");
+    document.getElementById("formulario").addEventListener("submit", function (event) {
+        event.preventDefault(); // No enviar hasta verificar
 
-            const errorNombre = document.getElementById("errorNombre");
-            const errorEmail = document.getElementById("errorEmail");
+        let valid = true;
 
-            if (!nombre.checkValidity()) {
-                errorNombre.textContent = "Introduce un nombre válido (solo letras y espacios).";
-                valid = false;
-            } else {
-                errorNombre.textContent = "";
-            }
+        const nombre = document.getElementById("nombre");
+        const email = document.getElementById("email");
+        const mensaje = document.getElementById("mensaje");
 
-            if (!email.checkValidity()) {
-                errorEmail.textContent = "Introduce un correo válido.";
-                valid = false;
-            } else {
-                errorEmail.textContent = "";
-            }
+        const errorNombre = document.getElementById("errorNombre");
+        const errorEmail = document.getElementById("errorEmail");
+        const errorMensaje = document.getElementById("errorMensaje");
 
-            if (!valid) event.preventDefault();
-        });
-    </script>
+        // Validación de nombre (letras y espacios, mínimo 3)
+        if (!/^[A-Za-z\s]{3,50}$/.test(nombre.value.trim())) {
+            errorNombre.textContent = "Introduce un nombre válido (solo letras y espacios, 3-50 caracteres).";
+            valid = false;
+        } else {
+            errorNombre.textContent = "";
+        }
+
+        // Validación de email
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value.trim())) {
+            errorEmail.textContent = "Introduce un correo válido.";
+            valid = false;
+        } else {
+            errorEmail.textContent = "";
+        }
+
+        // Validación de mensaje
+        if (mensaje.value.trim().length < 5) {
+            errorMensaje.textContent = "Por favor, escribe un mensaje más largo.";
+            valid = false;
+        }
+
+        // Si todo es válido, se envía
+        if (valid) {
+            this.submit();
+        }
+    });
+</script>
+
 </body>
 
 </html>

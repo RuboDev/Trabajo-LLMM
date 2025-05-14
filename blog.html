@@ -1,89 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Blog Ciberescudo</title>
-  <style>
-    body {
-      background: #111;
-      color: #eee;
-      font-family: Arial, sans-serif;
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 2rem;
-      padding: 2rem;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog Ciberescudo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+  </head>
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="brand">
+          <a href="index.html" aria-label="Logo"
+            ><img src="img/main-logo.webp" alt="logo" width="150px" height="90"
+          /></a>
+        </div>
+        <nav>
+          <div class="overlay"></div>
+          <!-- Fondo borroso -->
+          <a
+            class="menu-toggle"
+            href="#"
+            role="button"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <svg class="burger" viewBox="0 0 100 80" width="40" height="40">
+              <rect width="100" height="20"></rect>
+              <rect y="30" width="100" height="20"></rect>
+              <rect y="60" width="100" height="20"></rect>
+            </svg>
+          </a>
+          <ul class="menu" id="menu" role="menu">
+            <li class="close-menu" role="menuitem">
+              <!-- botón X para cerrar menu -->
+              <svg class="close" viewBox="0 0 100 100" width="40" height="40">
+                <line
+                  x1="10"
+                  y1="10"
+                  x2="90"
+                  y2="90"
+                  stroke="var(--secondary)"
+                  stroke-width="10"
+                />
+                <line
+                  x1="90"
+                  y1="10"
+                  x2="10"
+                  y2="90"
+                  stroke="var(--secondary)"
+                  stroke-width="10"
+                />
+              </svg>
+            </li>
+            <li role="menuitem">
+              <a href="index.html" aria-label="Inicio">Inicio</a>
+            </li>
+            <li role="menuitem">
+              <a href="actividades.html" aria-label="Actividades"
+                >Actividades</a
+              >
+            </li>
+            <li role="menuitem">
+              <a href="productos.html" aria-label="Productos y Servicios"
+                >Productos y Servicios</a
+              >
+            </li>
+            <li role="menuitem">
+              <a href="blog.html" aria-label="Blog">Blog</a>
+            </li>
+            <li role="menuitem">
+              <a href="empleo.html" aria-label="Empleo">Empleo</a>
+            </li>
+            <li role="menuitem">
+              <a href="contacto.html" aria-label="Contacto">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    .post {
-      background: #1b1b1b;
-      padding: 1rem;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
+    <main class="main">
+      <div class="main-container">
+        <aside>
+          <h3>Noticias recientes</h3>
+          
+            <ul class="news-list">
+              <li>
+                <a href="#">[Marzo 2025] Lanzamiento de nuestra IA defensiva</a>
+              </li>
+              <li>
+                <a href="#"
+                  >[Febrero 2025] Caso de éxito: defensa ante ataque
+                  ransomware</a
+                >
+              </li>
+              <li>
+                <a href="#">[Enero 2025] Nuevo equipo técnico en Europa</a>
+              </li>
+              <li>
+                <a href="#">[Diciembre 2024] Colaboración con la Interpol</a>
+              </li>
+              <li>
+                <a href="#">[Noviembre 2024] 100.000 sistemas protegidos</a>
+              </li>
+            </ul>
+        </aside>
 
-    .post:hover {
-      transform: translateY(-5px);
-      background-color: #222;
-    }
+        <section class="grid">
+          <div class="post">
+            <img src="img/blog/deteccion.webp" alt="noticia" />
+            <h3>Nuestro nuevo sistema de detección de intrusos</h3>
+            <p>
+              Descubre cómo el IDS de Ciberescudo está revolucionando la
+              ciberdefensa empresarial.
+            </p>
+          </div>
+          <div class="post">
+            <img src="img/blog/firewall-mejora.webp" alt="noticia" />
+            <h3>Mejoras en nuestros firewalls</h3>
+            <p>Más rápidos, más inteligentes. Conoce las últimas mejoras.</p>
+          </div>
+        </section>
+      </div>
+    </main>
 
-    .post img {
-      width: 100%;
-      border-radius: 5px;
-      margin-bottom: 0.5rem;
-    }
-
-    aside {
-      background: #1a1a1a;
-      padding: 1rem;
-      border-radius: 10px;
-    }
-
-    aside h3 {
-      margin-top: 0;
-    }
-
-    aside ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    aside li {
-      margin-bottom: 0.5rem;
-    }
-
-    aside a {
-      color: #1e90ff;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <section class="grid">
-    <div class="post">
-      <img src="noticia1.jpg" alt="noticia">
-      <h3>Nuestro nuevo sistema de detección de intrusos</h3>
-      <p>Descubre cómo el IDS de Ciberescudo está revolucionando la ciberdefensa empresarial.</p>
-    </div>
-    <div class="post">
-      <img src="noticia2.jpg" alt="noticia">
-      <h3>Mejoras en nuestros firewalls</h3>
-      <p>Más rápidos, más inteligentes. Conoce las últimas mejoras.</p>
-    </div>
-  </section>
-
-  <aside>
-    <h3>Noticias recientes</h3>
-    <ul>
-      <li><a href="#">[Marzo 2025] Lanzamiento de nuestra IA defensiva</a></li>
-      <li><a href="#">[Febrero 2025] Caso de éxito: defensa ante ataque ransomware</a></li>
-      <li><a href="#">[Enero 2025] Nuevo equipo técnico en Europa</a></li>
-    </ul>
-  </aside>
-</body>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-info" id="contacto">
+          <h3>Contacto</h3>
+          <p><strong>Email:</strong> contacto@empresa.com</p>
+          <p><strong>Teléfono:</strong> +34 123 456 789</p>
+          <p><strong>Horario:</strong> Lunes a Viernes, 9:00 - 18:00</p>
+        </div>
+        <div class="footer-info" id="derechos">
+          <p>
+            &copy; 2025 Ciberescudo - Seguridad informática integral. Todos los
+            derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

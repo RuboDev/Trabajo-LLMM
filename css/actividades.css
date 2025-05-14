@@ -55,8 +55,7 @@ main {
         grid-template:
             "header header header" auto
             "main main main" auto
-            "footer footer footer" auto / 
-            1fr 5fr;
+            "footer footer footer" auto / 1fr 5fr;
     }
 
     .main-container {

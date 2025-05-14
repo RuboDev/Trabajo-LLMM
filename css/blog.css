@@ -5,6 +5,7 @@
         "main" auto
         "footer" auto;
 }
+
 main {
     font-style: oblique;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,

@@ -58,7 +58,8 @@ main h1 {
     background-color: var(--primary);
     margin-bottom: 2rem;
     padding: 1rem;
-    box-shadow: inset -10px 0 0 var(--accent-color); /* Barrita a la derecha */
+    box-shadow: inset -10px 0 0 var(--accent-color);
+    /* Barrita a la derecha */
 }
 
 
@@ -95,6 +96,49 @@ img.producto:hover {
 .table-responsive table {
     min-width: 600px;
     width: 100%;
+}
+
+.destacado {
+    background: linear-gradient(90deg, var(--accent-color), var(--primary));
+    color: #000;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.oferta {
+    flex: 1 1 300px;
+    background-color: white;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 1rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+.oferta img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.oferta img:hover {
+    transform: scale(1.05);
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    margin-top: 2rem;
 }
 
 

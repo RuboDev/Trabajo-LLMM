@@ -1,3 +1,10 @@
+.grid-layout {
+    display: grid;
+    grid-template:
+        "header" auto
+        "main" auto
+        "footer" auto;
+}
 main {
     font-style: oblique;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -6,7 +13,6 @@ main {
 
 .main-container {
     color: #eee;
-    font-family: Arial, sans-serif;
     display: grid;
     gap: 2rem;
     padding: 2rem;

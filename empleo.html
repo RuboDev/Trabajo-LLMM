@@ -9,46 +9,103 @@
 </head>
 
 <body>
-    <h1>Forma parte de nuestro equipo</h1>
+    <header class="header">
+        <div class="header-container">
+            <div class="brand">
+                <a href="index.html" aria-label="Logo"><img src="img/main-logo.webp" alt="logo" width="150px"
+                        height="90" /></a>
+            </div>
+            <nav>
+                <div class="overlay"></div>
+                <!-- Fondo borroso -->
+                <a class="menu-toggle" href="#" role="button" aria-controls="menu" aria-expanded="false"
+                    aria-label="Abrir menú">
+                    <svg class="burger" viewBox="0 0 100 80" width="40" height="40">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                </a>
+                <ul class="menu" id="menu" role="menu">
+                    <li class="close-menu" role="menuitem">
+                        <!-- botón X para cerrar menu -->
+                        <svg class="close" viewBox="0 0 100 100" width="40" height="40">
+                            <line x1="10" y1="10" x2="90" y2="90" stroke="var(--secondary)" stroke-width="10" />
+                            <line x1="90" y1="10" x2="10" y2="90" stroke="var(--secondary)" stroke-width="10" />
+                        </svg>
+                    </li>
+                    <li role="menuitem">
+                        <a href="index.html" aria-label="Inicio">Inicio</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="actividades.html" aria-label="Actividades">Actividades</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="productos.html" aria-label="Productos y Servicios">Productos y Servicios</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="blog.html" aria-label="Blog">Blog</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="empleo.html" aria-label="Empleo">Empleo</a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="contacto.html" aria-label="Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="grid">
-        <section class="panel">
-            <h2>Tablón de anuncios</h2>
-            <p>📢 Estamos buscando analistas de seguridad, pentesters y desarrolladores backend especializados en
-                Node.js.</p>
-        </section>
 
-        <section class="panel">
-            <h2>Perfil requerido</h2>
-            <ul>
-                <li>Experiencia en seguridad informática</li>
-                <li>Conocimientos de redes y protocolos</li>
-                <li>Capacidad de trabajo en equipo</li>
-            </ul>
-        </section>
+    <main class="main">
+        
+        <div class="main-container">
+            <h1>Forma parte de nuestro equipo</h1>
+        <div class="grid">
+            <section class="panel">
+                    <h2>Tablón de anuncios</h2>
+                    <p>📢 Estamos buscando analistas de seguridad, pentesters y desarrolladores backend especializados
+                        en
+                        Node.js.</p>
+                </section>
 
-        <section class="panel">
-            <h2>Formulario de solicitud</h2>
-            <form id="formulario">
-                <label for="nombre">Nombre completo:
-                    <input type="text" id="nombre" name="nombre" pattern="[A-Za-z\s]{3,50}" required>
-                    <span id="errorNombre" class="error"></span>
-                </label>
+                <section class="panel">
+                    <h2>Perfil requerido</h2>
+                    <ul>
+                        <li>Experiencia en seguridad informática</li>
+                        <li>Conocimientos de redes y protocolos</li>
+                        <li>Capacidad de trabajo en equipo</li>
+                    </ul>
+                </section>
 
-                <label for="email">Email:
-                    <input type="email" id="email" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
-                    <span id="errorEmail" class="error"></span>
-                </label>
+                <section class="panel formulario-panel">
+                    <h2>Formulario de solicitud</h2>
+                    <form id="formulario">
+                        <label for="nombre">Nombre completo:
+                            <input type="text" id="nombre" name="nombre" pattern="[A-Za-z\s]{3,50}" required>
+                            <span id="errorNombre" class="error"></span>
+                        </label>
 
-                <label for="mensaje">Mensaje:
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                </label>
+                        <label for="email">Email:
+                            <input type="email" id="email" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+                            <span id="errorEmail" class="error"></span>
+                        </label>
 
-                <button type="submit">Enviar solicitud</button>
-            </form>
-        </section>
-    </div>
+                        <label for="mensaje">Mensaje:
+                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                        </label>
 
+                        <button type="submit">Enviar solicitud</button>
+                    </form>
+                </section>
+        </div>
+                
+            
+        </div>
+    </main>
+
+    <script src="script.js"></script>
     <script>
         document.getElementById("formulario").addEventListener("submit", function (event) {
             let valid = true;

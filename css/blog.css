@@ -33,7 +33,6 @@ main {
 .post img {
     width: 100%;
     height: 300px;
-    /* o 150px si prefieres más compactas */
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 0.5rem;

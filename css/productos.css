@@ -1,4 +1,3 @@
-/* LAYOUT con Grid - Mobile First */
 .grid-layout {
     display: grid;
     grid-template:
@@ -87,7 +86,6 @@ img.producto:hover {
     filter: grayscale(0%) brightness(1.2);
 }
 
-/* Añade esto a tu CSS */
 .table-responsive {
     width: 100%;
     overflow-x: auto;
@@ -95,7 +93,7 @@ img.producto:hover {
 }
 
 .table-responsive table {
-    min-width: 600px; /* Ajusta según tu contenido mínimo */
+    min-width: 600px;
     width: 100%;
 }
 

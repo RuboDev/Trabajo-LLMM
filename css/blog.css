@@ -38,12 +38,6 @@ main {
     margin-bottom: 0.5rem;
 }
 
-aside {
-    background: var(--secondary);
-    padding: 1rem;
-    border-radius: 10px;
-}
-
 aside h3 {
     margin-top: 0;
 }

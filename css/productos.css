@@ -118,4 +118,12 @@ img.producto:hover {
             "footer footer footer" auto /
             1fr 5fr;
     }
+
+    .main-container {
+        align-items: center;
+    }
+
+    .info {
+        max-width: 70%;
+    }
 }

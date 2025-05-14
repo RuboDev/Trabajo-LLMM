@@ -123,10 +123,6 @@
 
     <script src="script.js"></script>
     <script>
-    // Evita los mensajes nativos del navegador
-    document.querySelectorAll("input, textarea").forEach(input => {
-        input.addEventListener("invalid", e => e.preventDefault());
-    });
 
     document.getElementById("formulario").addEventListener("submit", function (event) {
         event.preventDefault(); // No enviar hasta verificar

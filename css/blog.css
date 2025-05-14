@@ -93,13 +93,11 @@ aside h3 {
 
 .news-list li {
     margin-bottom: 0.75rem;
-    position: relative;
     padding-left: 1.2rem;
 }
 
 .news-list li::before {
     content: "🛡️";
-    position: absolute;
     left: 0;
     top: 0;
     font-size: 0.9rem;
